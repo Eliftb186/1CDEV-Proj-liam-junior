@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int main() {
-    int jeu[10][10];
+    int jeu[10][10]; // max tableau 10/10
     int couleur[10][10];
     int end = 0;
     int x; // ligne
@@ -28,7 +28,7 @@ int main() {
         jeu[0][2] = 2;
         jeu[0][3] = 3;
         couleur[0][0] = 34;
-        posxr = -1;
+        posxr = -1; // si il n'y qu'une couleur
         x = 0;
         y = 0;
     } else if (n == 22) { // un niveau avec des couleurs pour l'exemple

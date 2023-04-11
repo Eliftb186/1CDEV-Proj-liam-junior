@@ -1,8 +1,8 @@
-// on include les fichiers d'en-tête
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
     int logicielTourne = 0;
     while (logicielTourne == 0)
     {
@@ -15,8 +15,11 @@ int main() {
         int posyb;
         int posxr;
         int posyr;
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+
+        for (int i = 0; i < 10; i++)
+        {
+            for (int j = 0; j < 10; j++)
+            {
                 jeu[i][j] = -1;
                 couleur[i][j] = 0;
             }
@@ -25,23 +28,62 @@ int main() {
         printf("Choisi un niveau entre 1 et 30 : ");
         int n;
         scanf("%d", &n);
-        if (n == 1){
-            jeu[0][0] = 0;
-            jeu[0][1] = 1;
-            jeu[0][2] = 2;
-            jeu[0][3] = 3;
-            couleur[0][0] = 34;
-            posxr = -1; // si il n'y qu'une couleur
+        if (n == 20)
+        {
+            jeu[0][0] = 4;
+            jeu[0][1] = 4;
+            jeu[0][2] = 4;
+            jeu[0][3] = 4;
+            jeu[0][4] = 4;
+            jeu[1][0] = 4;
+            jeu[1][1] = 2;
+            jeu[1][2] = 2;
+            jeu[1][3] = 2;
+            jeu[1][4] = 4;
+            jeu[2][0] = 4;
+            jeu[2][1] = 2;
+            jeu[2][2] = 0;
+            jeu[2][3] = 4;
+            jeu[2][4] = 4;
+            jeu[3][0] = 4;
+            jeu[3][1] = 2;
+            jeu[3][2] = 2;
+            jeu[3][3] = 4;
+            jeu[3][4] = 4;
+            jeu[4][0] = 4;
+            jeu[4][1] = 4;
+            jeu[4][2] = 4;
+            jeu[4][3] = 5;
+            jeu[4][4] = 6;
+            couleur[2][2] = 31;
+            posxr = -1;
+            x = 2;
+            y = 2;
+        }
+        else if (n == 21)
+        {
+            jeu[0][0] = 1;
+            jeu[0][1] = 0;
+            jeu[1][0] = 1;
+            jeu[1][1] = 1;
+            jeu[2][0] = 0;
+            jeu[2][1] = 1;
+            couleur[0][1] = 34;
+            couleur[2][0] = 31;
+            posxr = 2;
+            posyr = 0;
             x = 0;
-            y = 0;
-        } else if (n == 22) { // un niveau avec des couleurs pour l'exemple
+            y = 1;
+        }
+        else if (n == 22)
+        {
             jeu[0][0] = 0;
             jeu[0][1] = 1;
             jeu[0][2] = 1;
             jeu[1][2] = 1;
-            jeu[2][2] = 0;
-            jeu[2][1] = 1;
             jeu[2][0] = 1;
+            jeu[2][1] = 1;
+            jeu[2][2] = 0;
             couleur[0][0] = 34;
             couleur[2][2] = 31;
             posxr = 2;
@@ -49,92 +91,318 @@ int main() {
             x = 0;
             y = 0;
         }
-        
+        else if (n == 23)
+        {
+            jeu[0][0] = 1;
+            jeu[0][1] = 1;
+            jeu[0][2] = 1;
+            jeu[1][1] = 1;
+            jeu[1][0] = 1;
+            jeu[2][0] = 0;
+            jeu[2][1] = 1;
+            jeu[3][0] = 0;
+            jeu[3][1] = 1;
+            jeu[3][2] = 1;
+            couleur[2][0] = 34;
+            couleur[3][0] = 31;
+            posxr = 3;
+            posyr = 0;
+            x = 2;
+            y = 0;
+        }
+        else if (n == 24)
+        {
+            jeu[0][0] = 0;
+            jeu[0][1] = 1;
+            jeu[0][3] = 1;
+            jeu[1][0] = 1;
+            jeu[1][1] = 1;
+            jeu[1][2] = 1;
+            jeu[1][3] = 1;
+            jeu[2][0] = 1;
+            jeu[2][1] = 0;
+            jeu[2][2] = 1;
+            jeu[3][0] = 1;
+            jeu[3][1] = 1;
+            jeu[3][2] = 1;
+            jeu[3][3] = 1;
+            couleur[0][0] = 34;
+            couleur[2][1] = 31;
+            posxr = 2;
+            posyr = 1;
+            x = 0;
+            y = 0;
+        }
+        else if (n == 25)
+        {
+            jeu[0][0] = 1;
+            jeu[0][1] = 1;
+            jeu[0][2] = 0;
+            jeu[1][0] = 1;
+            jeu[1][2] = 1;
+            jeu[2][0] = 0;
+            jeu[2][1] = 2;
+            jeu[2][2] = 1;
+            ;
+            couleur[0][2] = 34;
+            couleur[2][0] = 31;
+            posxr = 2;
+            posyr = 0;
+            x = 0;
+            y = 2;
+        }
+        else if (n == 26)
+        {
+            jeu[0][1] = 1;
+            jeu[0][2] = 2;
+            jeu[0][3] = 2;
+            jeu[1][0] = 1;
+            jeu[1][1] = 1;
+            jeu[1][2] = 1;
+            jeu[1][3] = 0;
+            jeu[2][0] = 0;
+            jeu[2][2] = 2;
+            jeu[2][3] = 2;
+            couleur[1][3] = 34;
+            couleur[2][0] = 31;
+            posxr = 2;
+            posyr = 0;
+            x = 1;
+            y = 3;
+        }
+        else if (n == 27)
+        {
+            jeu[0][1] = 0;
+            jeu[0][2] = 1;
+            jeu[1][0] = 3;
+            jeu[1][1] = 2;
+            jeu[1][2] = 1;
+            jeu[1][3] = 1;
+            jeu[2][0] = 3;
+            jeu[2][1] = 2;
+            jeu[2][2] = 1;
+            jeu[2][3] = 1;
+            jeu[3][0] = 2;
+            jeu[3][1] = 2;
+            jeu[3][2] = 1;
+            jeu[3][3] = 0;
+            jeu[4][0] = 2;
+            jeu[4][1] = 3;
+            jeu[4][2] = 1;
+            jeu[4][3] = 1;
+            couleur[0][1] = 34;
+            couleur[3][3] = 31;
+            posxr = 3;
+            posyr = 3;
+            x = 0;
+            y = 1;
+        }
+        else if (n == 28)
+        {
+            jeu[0][0] = 0;
+            jeu[0][1] = 6;
+            jeu[0][2] = 5;
+            jeu[1][0] = 2;
+            jeu[1][1] = 2;
+            jeu[1][2] = 1;
+            jeu[2][0] = 4;
+            jeu[2][1] = 3;
+            jeu[2][2] = 0;
+            couleur[0][0] = 34;
+            couleur[2][2] = 31;
+            posxr = 2;
+            posyr = 2;
+            x = 0;
+            y = 0;
+        }
+        else if (n == 29)
+        {
+            jeu[0][0] = 4;
+            jeu[0][1] = 2;
+            jeu[0][3] = 1;
+            jeu[0][4] = 0;
+            jeu[1][0] = 0;
+            jeu[1][1] = 2;
+            jeu[1][2] = 2;
+            jeu[1][3] = 1;
+            jeu[1][4] = 1;
+            jeu[2][0] = 2;
+            jeu[2][1] = 2;
+            jeu[2][2] = 2;
+            jeu[2][3] = 2;
+            jeu[2][4] = 2;
+            jeu[3][0] = 4;
+            jeu[3][1] = 3;
+            jeu[3][3] = 2;
+            jeu[3][4] = 2;
+            couleur[0][4] = 33;
+            couleur[1][0] = 31;
+            posxr = 1;
+            posyr = 0;
+            x = 0;
+            y = 4;
+        }
+        else if (n == 30)
+        {
+            jeu[0][0] = 2;
+            jeu[0][1] = 2;
+            jeu[0][2] = 2;
+            jeu[0][3] = 1;
+            jeu[1][0] = 2;
+            jeu[1][1] = 2;
+            jeu[1][2] = 2;
+            jeu[1][3] = 1;
+            jeu[1][4] = 1;
+            jeu[2][0] = 2;
+            jeu[2][1] = 2;
+            jeu[2][2] = 2;
+            jeu[2][3] = 3;
+            jeu[2][4] = 1;
+            jeu[3][0] = 0;
+            jeu[3][1] = 3;
+            jeu[3][3] = 1;
+            jeu[3][4] = 1;
+            jeu[4][0] = 1;
+            jeu[4][1] = 1;
+            jeu[4][3] = 0;
+            couleur[3][0] = 31;
+            couleur[4][3] = 33;
+            posxr = 3;
+            posyr = 0;
+            x = 4;
+            y = 3;
+        }
+
         // boucle du jeu
-        while (end == 0) {
+        while (end == 0)
+        {
             // affichage du jeu
-            for (int i = 0; i < 10; i++) {
-                for (int j = 0; j < 10; j++) {
-                    if (jeu[i][j] == -1) {
-                        printf(" ");
-                    } else if (jeu[i][j] == 0)
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (jeu[i][j] == -1)
                     {
-                        printf("\033[%dmD\033[0m", couleur[i][j]); // D = départ
-                    } else {
-                        if (couleur[i][j] == 0) {
+                        printf(" ");
+                    }
+                    else if (jeu[i][j] == 0)
+                    {
+                        printf("\033[%dmX\033[0m", couleur[i][j]); // X = départ
+                    }
+                    else
+                    {
+                        if (couleur[i][j] == 0)
+                        {
                             printf("%d", jeu[i][j]);
-                        } else {
-                            printf("\033[%dm%d\033[0m", couleur[i][j],jeu[i][j]);
+                        }
+                        else
+                        {
+                            printf("\033[%dm%d\033[0m", couleur[i][j], jeu[i][j]);
                         }
                     }
                 }
                 printf("\n");
             }
             // choix du déplacement
-            printf("Choisi un déplacement (1 ⬆️, 2 ⬇️, 3 ⬅️, 4 ➡️) : ");
-            printf("recommencer le niveau (5) :");
-            printf("Sélectionner une autre couleur (6) :");
+            printf("Choisi un deplacement (1 :HAUT, 2:BAS, 3:GAUCHE, 4:DROITE) : \n");
+            printf("recommencer le niveau (5) : \n");
+            printf("Selectionner une autre couleur (6) : \n");
+            printf("Arrete la partie(7): \n");
             int c;
             scanf("%d", &c);
-            if (c == 1) {
-                if (x > 0) {
-                    if (jeu[x - 1][y] > 0 && jeu[x - 1][y] >= jeu[x][y]) {
-                        if (couleur[x - 1][y] == 0) {
+            if (c == 1)
+            {
+                if (x > 0)
+                {
+                    if (jeu[x - 1][y] > 0 && jeu[x - 1][y] >= jeu[x][y])
+                    {
+                        if (couleur[x - 1][y] == 0)
+                        {
                             couleur[x - 1][y] = couleur[x][y];
                             x--;
                         }
                     }
                 }
-            } else if (c == 2) {
-                if (x < 9) {
-                    if (jeu[x + 1][y] > 0 && jeu[x + 1][y] >= jeu[x][y]) {
-                        if (couleur[x + 1][y] == 0) {
+            }
+            else if (c == 2)
+            {
+                if (x < 9)
+                {
+                    if (jeu[x + 1][y] > 0 && jeu[x + 1][y] >= jeu[x][y])
+                    {
+                        if (couleur[x + 1][y] == 0)
+                        {
                             couleur[x + 1][y] = couleur[x][y];
                             x++;
                         }
                     }
                 }
-            } else if (c == 3) {
-                if (y > 0) {
-                    if (jeu[x][y - 1] > 0 && jeu[x][y - 1] >= jeu[x][y]) {
-                        if (couleur[x][y - 1] == 0) {
+            }
+            else if (c == 3)
+            {
+                if (y > 0)
+                {
+                    if (jeu[x][y - 1] > 0 && jeu[x][y - 1] >= jeu[x][y])
+                    {
+                        if (couleur[x][y - 1] == 0)
+                        {
                             couleur[x][y - 1] = couleur[x][y];
                             y--;
                         }
                     }
                 }
-            } else if (c == 4) {
-                if (y < 9) {
-                    if (jeu[x][y + 1] > 0 && jeu[x][y + 1] >= jeu[x][y]) {
-                        if (couleur[x][y + 1] == 0) {
+            }
+            else if (c == 4)
+            {
+                if (y < 9)
+                {
+                    if (jeu[x][y + 1] > 0 && jeu[x][y + 1] >= jeu[x][y])
+                    {
+                        if (couleur[x][y + 1] == 0)
+                        {
                             couleur[x][y + 1] = couleur[x][y];
                             y++;
                         }
                     }
                 }
-            } else if (c == 5) {
+            }
+            else if (c == 5)
+            {
                 int compteur = 0;
-                for (int i = 0; i < 10; i++) {
-                    for (int j = 0; j < 10; j++) {
-                        if (jeu[i][j] == 0 && compteur == 0) {
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (jeu[i][j] == 0 && compteur == 0)
+                        {
                             compteur++;
                             x = i;
                             y = j;
-                        } else if (jeu[i][j] >0){
+                        }
+                        else if (jeu[i][j] > 0)
+                        {
                             couleur[i][j] = 0;
                         }
                     }
                 }
-            } else if (c == 6) {
-                if (posxr == -1) {
+            }
+            else if (c == 6)
+            {
+                if (posxr == -1)
+                {
                     printf("\nVous ne pouvez pas changer de couleur\n");
-                } else {
-                    if (couleur[x][y] == 31) {
+                }
+                else
+                {
+                    if (couleur[x][y] == 31)
+                    {
                         posxr = x;
                         posyr = y;
                         x = posxb;
                         y = posyb;
-                    } else {
+                    }
+                    else
+                    {
                         posxb = x;
                         posyb = y;
                         x = posxr;
@@ -144,19 +412,29 @@ int main() {
             }
             // test end
             end = 1;
-            for (int i = 0; i < 10; i++) {
-                for (int j = 0; j < 10; j++) {
-                    if (couleur[i][j] == 0) {
-                        if (jeu[i][j] > 0) {
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (couleur[i][j] == 0)
+                    {
+                        if (jeu[i][j] > 0)
+                        {
                             end = 0;
                         }
                     }
                 }
             }
+            if (c == 7)
+            {
+
+                end = 1;
+            }
         }
-        printf("Partie terminée !\n");
+
+        printf("Partie terminee !\n");
         printf("Voulez-vous rejouer ? (0 = oui, 1 = non) : ");
         scanf("%d", &logicielTourne);
     }
-    printf("Programme terminé");
+    printf("Programme termine");
 }

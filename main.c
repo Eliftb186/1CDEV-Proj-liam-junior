@@ -303,11 +303,22 @@ int main()
                 }
                 printf("\n");
             }
+            // afficher position X et Y et couleur
+            printf("X = %d, Y = %d, couleur = ", x, y);
+            if (couleur[x][y] == 34)
+            {
+                printf("\033[34m Bleu \n\033[0m");
+            }
+            else if (couleur[x][y] == 31)
+            {
+                printf("\033[31m Rouge \n\033[0m");
+            }
             // choix du déplacement
             printf("Choisi un deplacement (1 :HAUT, 2:BAS, 3:GAUCHE, 4:DROITE) : \n");
             printf("recommencer le niveau (5) : \n");
             printf("Selectionner une autre couleur (6) : \n");
             printf("Arrete la partie(7): \n");
+            printf("Effacer la chaine (8) : \n");
             int c;
             scanf("%d", &c);
             if (c == 1)
@@ -407,6 +418,28 @@ int main()
                         posyb = y;
                         x = posxr;
                         y = posyr;
+                    }
+                }
+            }
+            else if (c == 8)
+            {
+                int couleurtmp = couleur[x][y];
+                for (int i = 0; i < 10; i++)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        if (couleur[i][j] == couleurtmp)
+                        {
+                            if (jeu[i][j] > 0)
+                            {
+                                couleur[i][j] = 0;
+                            }
+                            else if (jeu[i][j] == 0)
+                            {
+                                x = i;
+                                y = j;
+                            }
+                        }
                     }
                 }
             }

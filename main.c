@@ -648,7 +648,7 @@ int main()
                 printf("\n");
             }
             // afficher position X et Y et couleur
-            printf("X = %d, Y = %d, couleur = ", x, y);
+            printf("ligne = %d, colone = %d, couleur = ", x, y);
             if (couleur[x][y] == 34)
             {
                 printf("\033[34m Bleu \n\033[0m");
@@ -658,13 +658,13 @@ int main()
                 printf("\033[31m Rouge \n\033[0m");
             }
             // choix du déplacement
-            printf("Choisi un deplacement (1 :HAUT, 2:BAS, 3:GAUCHE, 4:DROITE) : \n");
-            printf("Selectionner une autre couleur (6) : \n");
-            printf("Effacer la chaine (8) : \n");
-            printf("recommencer le niveau (5) : \n");
-            printf("Arrete la partie(7): \n");
-            printf("Effacer la chaine (8) : \n");
-            printf("effacer le dernier coup (9) : \n");
+            printf("Choisi un deplacement (1 :HAUT, 2:BAS, 3:GAUCHE, 4:DROITE). \n");
+            printf("Selectionner une autre couleur (6). \n");
+            printf("effacer le dernier coup (9). \n");
+            printf("Effacer la chaine (8). \n");
+            printf("recommencer le niveau (5). \n");
+            printf("Arrete la partie(7). \n");
+            printf("Effacer la chaine (8). \n");
             int c;
             scanf("%d", &c);
             if (c == 1)

@@ -15,6 +15,8 @@ int main()
         int posyb;
         int posxr;
         int posyr;
+        int dposx;
+        int dposy;
 
         for (int i = 0; i < 10; i++)
         {
@@ -661,6 +663,8 @@ int main()
             printf("Effacer la chaine (8) : \n");
             printf("recommencer le niveau (5) : \n");
             printf("Arrete la partie(7): \n");
+            printf("Effacer la chaine (8) : \n");
+            printf("effacer le dernier coup (9) : \n");
             int c;
             scanf("%d", &c);
             if (c == 1)
@@ -672,6 +676,8 @@ int main()
                         if (couleur[x - 1][y] == 0)
                         {
                             couleur[x - 1][y] = couleur[x][y];
+                            dposx = x;
+                            dposy = y;
                             x--;
                         }
                     }
@@ -686,6 +692,8 @@ int main()
                         if (couleur[x + 1][y] == 0)
                         {
                             couleur[x + 1][y] = couleur[x][y];
+                            dposx = x;
+                            dposy = y;
                             x++;
                         }
                     }
@@ -700,6 +708,8 @@ int main()
                         if (couleur[x][y - 1] == 0)
                         {
                             couleur[x][y - 1] = couleur[x][y];
+                            dposx = x;
+                            dposy = y;
                             y--;
                         }
                     }
@@ -714,6 +724,8 @@ int main()
                         if (couleur[x][y + 1] == 0)
                         {
                             couleur[x][y + 1] = couleur[x][y];
+                            dposx = x;
+                            dposy = y;
                             y++;
                         }
                     }
@@ -784,6 +796,20 @@ int main()
                         }
                     }
                 }
+            }
+            else if (c == 9)
+            {
+                if (jeu[x][y] > 0 && dposx != -1 && dposy != -1)
+                {
+                    couleur[x][y] = 0;
+                    x = dposx;
+                    y = dposy;
+                    dposx = -1;
+                    dposy = -1;
+                } else {
+                    printf("Vous ne pouvez pas annuler le dernier coup\n");
+                }
+
             }
             // test end
             end = 1;

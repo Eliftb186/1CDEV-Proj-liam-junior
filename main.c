@@ -648,7 +648,7 @@ int main()
                 printf("\n");
             }
             // afficher position X et Y et couleur
-            printf("ligne = %d, colone = %d, couleur = ", x, y);
+            printf("ligne = %d, colone = %d, couleur = ", x+1, y+1);
             if (couleur[x][y] == 34)
             {
                 printf("\033[34m Bleu \n\033[0m");
@@ -831,6 +831,32 @@ int main()
                 end = 1;
             }
         }
+        for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (jeu[i][j] == -1)
+                    {
+                        printf(" ");
+                    }
+                    else if (jeu[i][j] == 0)
+                    {
+                        printf("\033[%dmX\033[0m", couleur[i][j]); // X = départ
+                    }
+                    else
+                    {
+                        if (couleur[i][j] == 0)
+                        {
+                            printf("%d", jeu[i][j]);
+                        }
+                        else
+                        {
+                            printf("\033[%dm%d\033[0m", couleur[i][j], jeu[i][j]);
+                        }
+                    }
+                }
+                printf("\n");
+            }
 
         printf("Partie terminee !\n");
         printf("Voulez-vous rejouer ? (0 = oui, 1 = non) : ");

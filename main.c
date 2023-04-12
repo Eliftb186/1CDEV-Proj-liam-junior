@@ -659,12 +659,11 @@ int main()
             }
             // choix du déplacement
             printf("Choisi un deplacement (1 :HAUT, 2:BAS, 3:GAUCHE, 4:DROITE). \n");
-            printf("Selectionner une autre couleur (6). \n");
-            printf("effacer le dernier coup (9). \n");
-            printf("Effacer la chaine (8). \n");
-            printf("recommencer le niveau (5). \n");
-            printf("Arrete la partie(7). \n");
-            printf("Effacer la chaine (8). \n");
+            printf("Selectionner une autre couleur (5). \n");
+            printf("effacer le dernier coup (6). \n");
+            printf("Effacer la chaine (7). \n");
+            printf("recommencer le niveau (8). \n");
+            printf("Arrete la partie(9). \n");
             int c;
             scanf("%d", &c);
             if (c == 1)
@@ -731,7 +730,7 @@ int main()
                     }
                 }
             }
-            else if (c == 5)
+            else if (c == 8)
             {
                 int compteur = 0;
                 for (int i = 0; i < 10; i++)
@@ -751,7 +750,7 @@ int main()
                     }
                 }
             }
-            else if (c == 6)
+            else if (c == 5)
             {
                 if (posxr == -1)
                 {
@@ -775,7 +774,7 @@ int main()
                     }
                 }
             }
-            else if (c == 8)
+            else if (c == 7)
             {
                 int couleurtmp = couleur[x][y];
                 for (int i = 0; i < 10; i++)
@@ -797,7 +796,7 @@ int main()
                     }
                 }
             }
-            else if (c == 9)
+            else if (c == 6)
             {
                 if (jeu[x][y] > 0 && dposx != -1 && dposy != -1)
                 {
@@ -826,7 +825,7 @@ int main()
                     }
                 }
             }
-            if (c == 7)
+            if (c == 9)
             {
 
                 end = 1;

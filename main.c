@@ -28,7 +28,349 @@ int main()
         printf("Choisi un niveau entre 1 et 30 : ");
         int n;
         scanf("%d", &n);
-        if (n == 20)
+
+        if (n == 1){
+        jeu[0][0] = 0;
+        jeu[0][1] = 1;
+        jeu[0][2] = 1;
+        jeu[0][3] = 2;
+        couleur[0][0] = 34;
+        posxr = -1; // si il n'y qu'une couleur
+        x = 0;
+        y = 0;
+    }
+    else if(n == 2){
+        jeu[0][0] = 0;
+        jeu[0][1] = 1;
+        jeu[0][2] = 1;
+        jeu[0][3] = 2;
+        jeu[1][3]=2;
+        couleur[0][0] = 31;
+        posxr = -1; // si il n'y qu'une couleur
+        x = 0;
+        y = 0;
+    }
+    else if (n == 3) {
+    jeu[0][0] = 0;
+    jeu[0][1] = 1;
+    jeu[0][2] = 1;
+    jeu[1][2] = 1;
+    jeu[2][2] = 2;
+    jeu[3][2] = 2;
+    jeu[3][1] = 2;
+    couleur[0][0] = 31;
+    posxr =-1;
+    x = 0;
+    y = 0;
+    } else if (n == 4) {
+    jeu[0][0] = 0;
+    jeu[0][1] = 1;
+    jeu[0][2] = 1;
+    jeu[1][2] = 1;
+    jeu[2][2] = 1;
+    jeu[2][1] = 1;
+    jeu[2][0] = 1;
+    jeu[1][0] = 2;
+    couleur[0][0] = 31;
+    posxr = -1;
+    x = 0;
+    y = 0;
+    } else if (n == 5) {
+    jeu[4][5] = 0;
+    jeu[3][5] = 1;
+    jeu[2][5] = 1;
+    jeu[1][5] = 1;
+    jeu[1][4] = 1;
+    jeu[1][3] = 1;
+    jeu[1][2] = 1;
+    jeu[2][2] = 1;
+    jeu[3][2] = 2;
+    jeu[3][3] = 2;
+    jeu[3][4] = 2;
+    couleur[4][5] = 31;
+    posxr = -1;
+    x = 4;
+    y = 5;
+    } else if (n == 6) {
+    jeu[6][6] = 0;
+    jeu[6][5] = 1;
+    jeu[6][4] = 1;
+    jeu[6][3] = 2;
+    jeu[6][2] = 2;
+    jeu[6][7] = 1;
+    jeu[5][7] = 1;
+    jeu[5][6] = 1;
+    jeu[5][5] = 1;
+    couleur[6][6] = 31;
+    posxr = -1;
+    x = 6;
+    y = 6;
+    } else if (n == 7) {
+    jeu[3][0] = 0;
+    jeu[4][0] = 1;
+    jeu[5][0] = 1;
+    jeu[5][1] = 1;
+    jeu[4][1] = 2;
+    jeu[4][2] = 2;
+    jeu[3][2] = 2;
+    jeu[3][1] = 2;
+
+    couleur[3][0] = 31;
+    posxr = -1;
+    x = 3;
+    y = 0;
+    } else if (n == 8) {
+    jeu[5][5] = 0;
+    jeu[5][6] = 1;
+    jeu[4][6] = 1;
+    jeu[4][5] = 1;
+    jeu[4][4] = 1;
+    jeu[5][4] = 1;
+    jeu[6][4] = 1;
+    jeu[6][5] = 2;
+    jeu[6][6] = 2;
+    couleur[5][5] = 31;
+    x = 5;
+    y = 5;
+    }
+    else if (n == 9) {
+            jeu[2][4] = 0;
+            jeu[3][4] = 1;
+            jeu[4][4] = 1;
+            jeu[5][4] = 1;
+            jeu[5][5] = 1;
+            jeu[5][6] = 1;
+            jeu[5][7] = 1;
+            jeu[4][7] = 1;
+            jeu[3][7] =1;
+            jeu[2][7] = 1;
+            jeu[2][8] = 2;
+            jeu[2][9] = 2;
+            jeu[3][9] = 2;
+            jeu[4][9] = 2;
+            jeu[5][9] = 3;
+            jeu[6][9] = 3;
+            jeu[7][9] = 3;
+            couleur[2][4] = 34;
+            posxr = -1;
+            x = 2;
+            y = 4;
+    } else if (n == 10) {
+        jeu[3][2] = 0;
+        jeu[3][3] = 2;
+        jeu[0][1] = 1;
+        jeu[1][1] = 1;
+        jeu[2][1] = 1;
+        jeu[3][1] = 1;
+        jeu[4][1] = 2;
+        jeu[5][1] = 2;
+        jeu[5][2] = 2;
+        jeu[5][3] = 2;
+        jeu[0][2] = 2;
+        jeu[0][3] = 2;
+        jeu[0][4] = 2;
+        jeu[1][4] = 2;
+        jeu[2][4] = 2;
+        jeu[3][4] = 2;
+        jeu[4][4] = 2;
+        jeu[5][4] = 2;
+        couleur[3][2] = 34;
+        x = 3;
+        y = 2;
+    } else if (n == 11) {
+        jeu[0][0] = 0;
+        jeu[0][1] = 1;
+        jeu[0][2] = 1;
+        jeu[0][3] = 1;
+        jeu[1][3] = 1;
+        jeu[1][4] = 1;
+        jeu[1][5] = 1;
+        jeu[2][5] = 1;
+        jeu[2][6] = 2;
+        jeu[2][7] = 2;
+        jeu[2][8] = 2;
+        jeu[2][9] = 2;
+        jeu[3][5] = 1;
+        jeu[3][6] = 1;
+        jeu[3][7] = 2;
+        jeu[3][8] = 2;
+        jeu[3][9] = 2;
+        couleur[0][0] = 31;
+        x = 0;
+        y = 0;
+    } else if (n == 12) {
+        jeu[0][0] = 2;
+        jeu[1][0] = 2;
+        jeu[2][0] = 3;
+        jeu[2][1] = 1;
+        jeu[2][2] = 1;
+        jeu[2][3] = 0;
+        jeu[1][1] = 1;
+        jeu[1][2] = 1;
+        jeu[0][1] = 1;
+        jeu[0][2] = 1;
+        couleur[2][3] = 31;
+        x = 2;
+        y = 3;
+    }
+    else if (n == 13) {
+        jeu[0][0] = 3;
+        jeu[0][1] = 3;
+        jeu[0][2] = 3;
+        jeu[0][3] = 3;
+        jeu[1][0] = 2;
+        jeu[1][1] = 2;
+        jeu[1][2] = 2;
+        jeu[2][0] = 2;
+        jeu[2][1] = 2;
+        jeu[2][2] = 1;
+        jeu[2][3] = 0;
+
+        couleur[2][3] = 34;
+        x = 2;
+        y = 3;
+    }else if (n == 14)
+        {
+            jeu[0][3] = 5;
+            jeu[1][1] = 2;
+            jeu[1][2] = 2;
+            jeu[1][3] = 4;
+            jeu[2][1] = 2;
+            jeu[2][2] = 2;
+            jeu[2][3] = 3;
+            jeu[3][0] = 0;
+            jeu[3][1] = 1;
+            jeu[3][2] = 2;
+            jeu[3][3] = 2;
+            couleur[3][0] = 31;
+            posxr = -1;
+            x = 3;
+            y = 0;
+        }else if (n == 15)
+        {
+            jeu[0][0] = 1;
+            jeu[0][1] = 1;
+            jeu[0][2] = 1;
+            jeu[0][3] = 3;
+            jeu[0][4] = 4;
+            jeu[1][0] = 1;
+            jeu[1][2] = 1;
+            jeu[1][3] = 3;
+            jeu[1][4] = 5;
+            jeu[2][0] = 1;
+            jeu[2][1] = 0;
+            jeu[2][2] = 1;
+            jeu[2][3] = 1;
+            jeu[2][4] = 3;
+            jeu[3][0] = 1;
+            jeu[3][2] = 1;
+            jeu[3][3] = 1;
+            jeu[3][4] = 3;
+            jeu[4][0] = 1;
+            jeu[4][1] = 1;
+            jeu[4][2] = 1;
+            jeu[4][3] = 2;
+            jeu[4][4] = 2;
+            couleur[2][1] = 31;
+            posxr = -1;
+            x = 2;
+            y = 1;
+        }else if (n == 16)
+        {
+            jeu[0][1] = 7;
+            jeu[0][2] = 6;
+            jeu[0][3] = 3;
+            jeu[0][4] = 2;
+            jeu[1][0] = 9;
+            jeu[1][1] = 8;
+            jeu[1][2] = 5;
+            jeu[1][3] = 4;
+            jeu[1][4] = 1;
+            jeu[1][5] = 0;
+            jeu[2][1] = 4;
+            jeu[2][2] = 4;
+            jeu[2][3] = 4;
+            jeu[3][1] = 4;
+            jeu[3][3] = 4;
+            jeu[4][1] = 4;
+            jeu[4][2] = 4;
+            jeu[4][3] = 4;
+            couleur[1][5] = 31;
+            posxr = -1;
+            x = 1;
+            y = 5;
+        }else if (n == 17)
+        {
+            jeu[0][4] = 0;
+            jeu[1][0] = 1;
+            jeu[1][1] = 1;
+            jeu[1][2] = 1;
+            jeu[1][3] = 1;
+            jeu[1][4] = 1;
+            jeu[2][0] = 1;
+            jeu[2][1] = 1;
+            jeu[2][2] = 1;
+            jeu[2][3] = 1;
+            jeu[2][4] = 8;
+            jeu[2][5] = 9;
+            jeu[3][0] = 1;
+            jeu[3][1] = 1;
+            jeu[4][0] = 1;
+            jeu[4][1] = 1;
+            jeu[4][2] = 1;
+            jeu[4][3] = 1;
+            jeu[4][4] = 1;
+            jeu[5][0] = 1;
+            jeu[5][1] = 1;
+            jeu[5][2] = 1;
+            jeu[5][3] = 1;
+            jeu[5][4] = 1;
+            couleur[0][4] = 31;
+            posxr = -1;
+            x = 0;
+            y = 4;
+        }else if (n == 18)
+        {
+            jeu[0][1] = 9;
+            jeu[0][2] = 8;
+            jeu[0][3] = 7;
+            jeu[1][0] = 4;
+            jeu[1][1] = 4;
+            jeu[1][2] = 4;
+            jeu[1][3] = 6;
+            jeu[2][0] = 4;
+            jeu[2][1] = 0;
+            jeu[2][2] = 4;
+            jeu[2][3] = 5;
+            jeu[3][0] = 4;
+            jeu[3][1] = 4;
+            couleur[2][1] = 31;
+            posxr = -1;
+            x = 2;
+            y = 1;
+        } else if (n == 19)
+        {
+            jeu[0][1] = 2;
+            jeu[0][2] = 2;
+            jeu[0][3] = 2;
+            jeu[1][1] = 2;
+            jeu[1][2] = 2;
+            jeu[1][3] = 2;
+            jeu[2][0] = 0;
+            jeu[2][1] = 1;
+            jeu[2][2] = 2;
+            jeu[2][3] = 9;
+            jeu[3][1] = 2;
+            jeu[3][2] = 2;
+            jeu[3][3] = 8;
+            jeu[4][1] = 2;
+            jeu[4][2] = 2;
+            jeu[4][3] = 7;
+            couleur[2][0] = 31;
+            posxr = -1;
+            x = 2;
+            y = 0;
+        }else if (n == 20)
         {
             jeu[0][0] = 4;
             jeu[0][1] = 4;
@@ -235,7 +577,7 @@ int main()
             jeu[3][1] = 3;
             jeu[3][3] = 2;
             jeu[3][4] = 2;
-            couleur[0][4] = 33;
+            couleur[0][4] = 34;
             couleur[1][0] = 31;
             posxr = 1;
             posyr = 0;
@@ -266,7 +608,7 @@ int main()
             jeu[4][1] = 1;
             jeu[4][3] = 0;
             couleur[3][0] = 31;
-            couleur[4][3] = 33;
+            couleur[4][3] = 34;
             posxr = 3;
             posyr = 0;
             x = 4;
@@ -315,10 +657,10 @@ int main()
             }
             // choix du déplacement
             printf("Choisi un deplacement (1 :HAUT, 2:BAS, 3:GAUCHE, 4:DROITE) : \n");
-            printf("recommencer le niveau (5) : \n");
             printf("Selectionner une autre couleur (6) : \n");
-            printf("Arrete la partie(7): \n");
             printf("Effacer la chaine (8) : \n");
+            printf("recommencer le niveau (5) : \n");
+            printf("Arrete la partie(7): \n");
             int c;
             scanf("%d", &c);
             if (c == 1)
